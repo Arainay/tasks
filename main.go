@@ -8,7 +8,7 @@ import (
 
 func main() {
 	if true {
-		lib.Check()
+		lib.Sum()
 	} else {
 		var costs = []int{10, 20, 30, 40, 10, 20, 10, 30, 20, 10}
 		fmt.Println(lib.GetFullCost(costs))
@@ -49,5 +49,7 @@ func main() {
 
 		contacts := [][2]string{a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab, ac, ad}
 		fmt.Println(lib.GetLastCallsForEveryCallMaker(contacts))
+
+		lib.Check()
 	}
 }
