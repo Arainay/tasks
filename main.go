@@ -8,8 +8,14 @@ import (
 
 func main() {
 	if true {
-		lib.Sum()
+		fmt.Println(lib.IsEmployerEffective([]int{1, 2, 3, 4, 5}))
+		fmt.Println(lib.IsEmployerEffective([]int{1, 1, 1, 2, 2}))
+		fmt.Println(lib.IsEmployerEffective([]int{1, 1, 1, 1, 1}))
+		fmt.Println(lib.IsEmployerEffective([]int{1, 3, 3, 2, 5}))
+		fmt.Println(lib.IsEmployerEffective([]int{1, 3, 3, 2, 1}))
 	} else {
+		lib.Example()
+
 		var costs = []int{10, 20, 30, 40, 10, 20, 10, 30, 20, 10}
 		fmt.Println(lib.GetFullCost(costs))
 
@@ -51,5 +57,7 @@ func main() {
 		fmt.Println(lib.GetLastCallsForEveryCallMaker(contacts))
 
 		lib.Check()
+
+		lib.Sum()
 	}
 }
