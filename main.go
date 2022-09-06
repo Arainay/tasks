@@ -2,17 +2,25 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"strconv"
 
 	"example.arainay.com/lib"
 )
 
+func StringToInteger(str string) int {
+	intValue, err := strconv.Atoi(str)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	return intValue
+}
+
 func main() {
 	if true {
-		fmt.Println(lib.IsEmployerEffective([]int{1, 2, 3, 4, 5}))
-		fmt.Println(lib.IsEmployerEffective([]int{1, 1, 1, 2, 2}))
-		fmt.Println(lib.IsEmployerEffective([]int{1, 1, 1, 1, 1}))
-		fmt.Println(lib.IsEmployerEffective([]int{1, 3, 3, 2, 5}))
-		fmt.Println(lib.IsEmployerEffective([]int{1, 3, 3, 2, 1}))
+		list := []string{"24:00:00-23:59:59"}
+		fmt.Println(lib.ValidateTimePeriods(list))
 	} else {
 		lib.Example()
 
